@@ -1,2 +1,2 @@
-declare const connectDB: () => Promise<void>;
-export default connectDB;
+declare const connectDB: () => Promise<void>
+export default connectDB

@@ -1,2 +1,2 @@
-export default Footer;
-declare function Footer(): JSX.Element;
+export default Footer
+declare function Footer(): JSX.Element

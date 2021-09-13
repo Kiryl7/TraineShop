@@ -1,2 +1,2 @@
-export default ProductCarousel;
-declare function ProductCarousel(): JSX.Element;
+export default ProductCarousel
+declare function ProductCarousel(): JSX.Element

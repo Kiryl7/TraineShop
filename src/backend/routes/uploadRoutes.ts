@@ -5,10 +5,10 @@ import multer from 'multer'
 const router = express.Router()
 
 const storage = multer.diskStorage({
-  destination(req: express.Request, file: Express.Multer.File, cb) {
+  destination(req: express.Request, file: Express.Multer.File, cb: (error: Error | null, destination: string) => void) {
     cb(null, 'uploads/')
   },
-  filename(req: express.Request, file: Express.Multer.File, cb) {
+  filename(req: express.Request, file: Express.Multer.File, cb: (error: Error | null, filename: string) => void) {
     cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`)
   },
 })
@@ -21,7 +21,7 @@ function checkFileType(file: Express.Multer.File, cb: multer.FileFilterCallback)
   if (extname && mimetype) {
     return cb(null, true)
   } else {
-    cb('Images only!')
+    cb(new Error('Images only!'))
   }
 }
 
@@ -32,7 +32,7 @@ const upload = multer({
   },
 })
 
-router.post('/', upload.single('image'), (req: express.Request, res) => {
+router.post('/', upload.single('image'), (req: express.Request, res: express.Response) => {
   res.send(`/${req.file.path}`)
 })
 

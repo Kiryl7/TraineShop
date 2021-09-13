@@ -1,6 +1,5 @@
 import express from 'express'
 import Product from '../models/productModel'
-import { AuthUser } from './AuthUser'
 import { BaseRequest } from './BaseRequest'
 import { Item } from './Item'
 const asyncHandler = require('express-async-handler')

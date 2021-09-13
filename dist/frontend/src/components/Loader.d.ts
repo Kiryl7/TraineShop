@@ -1,2 +1,2 @@
-export default Loader;
-declare function Loader(): JSX.Element;
+export default Loader
+declare function Loader(): JSX.Element

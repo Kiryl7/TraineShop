@@ -3,10 +3,11 @@ import express from 'express'
 import bcrypt from 'bcryptjs'
 
 export interface UserDoc extends Document {
-  name: string;
-  email: string;
-  password: string;
-  dateJoined: string;
+  name: string
+  email: string
+  password: string
+  isAdmin: boolean
+  dateJoined: string
   matchPassword: (pw: string) => Promise<boolean>
 }
 
@@ -49,6 +50,6 @@ userSchema.pre('save', async function (next) {
   this.password = await bcrypt.hash(this.password, salt)
 })
 
-const User = mongoose.model<UserDoc>("User", userSchema);
+const User = mongoose.model<UserDoc>('User', userSchema)
 
 export default User

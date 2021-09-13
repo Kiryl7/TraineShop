@@ -1,14 +1,8 @@
 import express from 'express'
-const router = express.Router()
-import {
-  addOrderItems,
-  getOrderById,
-  updateOrderToPaid,
-  updateOrderToDelivered,
-  getMyOrders,
-  getOrders,
-} from '../controllers/orderController'
+import { addOrderItems, getOrderById, updateOrderToPaid, updateOrderToDelivered, getMyOrders, getOrders } from '../controllers/orderController'
 import { protect, admin } from '../middleware/authMiddleware'
+
+const router = express.Router()
 
 router.route('/').post(protect, addOrderItems).get(protect, admin, getOrders)
 router.route('/myorders').get(protect, getMyOrders)

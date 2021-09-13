@@ -1,3 +1,3 @@
 export interface Item {
-    rating: number
+  rating: number
 }

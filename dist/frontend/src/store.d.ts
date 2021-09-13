@@ -1,2 +1,2 @@
-export default store;
-declare const store: any;
+export default store
+declare const store: any

@@ -1,8 +1,8 @@
 import express from 'express'
+import generateToken from '../utils/generateToken'
+import User from '../models/userModel'
+import { BaseRequest } from './BaseRequest'
 const asyncHandler = require('express-async-handler')
-import generateToken from '../utils/generateToken.js'
-import User from '../models/userModel.js'
-import { BaseRequest } from './BaseRequest.js'
 
 // @desc    Auth user & get token
 // @route   POST /api/users/login

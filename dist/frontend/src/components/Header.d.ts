@@ -1,2 +1,2 @@
-export default Header;
-declare function Header(): JSX.Element;
+export default Header
+declare function Header(): JSX.Element

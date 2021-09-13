@@ -1,5 +1,5 @@
 export interface AuthUser {
-    _id: string;
-    name: string;
-    isAdmin: boolean;
+  _id: string
+  name: string
+  isAdmin: boolean
 }

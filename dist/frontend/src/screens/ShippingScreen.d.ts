@@ -1,4 +1,2 @@
-export default ShippingScreen;
-declare function ShippingScreen({ history }: {
-    history: any;
-}): JSX.Element;
+export default ShippingScreen
+declare function ShippingScreen({ history }: { history: any }): JSX.Element
