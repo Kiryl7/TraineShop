@@ -13,6 +13,7 @@ node_modules/
 /frontend/build
 
 # misc
+src\backend\data\secret.ts
 .DS_Store
 .env
 .env.local

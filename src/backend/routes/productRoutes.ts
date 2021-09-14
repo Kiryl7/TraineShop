@@ -1,7 +1,15 @@
 import express from 'express'
 
 const router = express.Router()
-import { getProducts, getProductById, deleteProduct, createProduct, updateProduct, createProductReview, getTopProducts } from '../controllers/productController'
+import {
+  getProducts,
+  getProductById,
+  deleteProduct,
+  createProduct,
+  updateProduct,
+  createProductReview,
+  getTopProducts,
+} from '../controllers/productController'
 import { protect, admin } from '../middleware/authMiddleware'
 
 router.route('/').get(getProducts).post(protect, admin, createProduct)
